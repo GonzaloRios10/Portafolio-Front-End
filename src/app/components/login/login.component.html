@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="row">
+  <div class="row-form">
+    <div class="row-header">
+      <img id="user-perfil" src="../../../assets/user.png">
+      <h2>Iniciar sesión</h2>
+      <p>Bienvenid@ a mi portafolio!</p>
+    </div>
+
+    <div class="row-form_login">
+      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <i class="fa-solid fa-user-check" style="padding-right: 5px"></i> 
+        <input placeholder="Nombre de usuario" type="email" id="nombreUsuario" [(ngModel)]="nombreUsuario" name="nombreUsuario" required/>
+        <br>
+        <i class="fa-solid fa-user-lock" style="padding-right: 5px"></i> 
+        <input placeholder="Contraseña" type="password" id="password" [(ngModel)]="password" name="password" required/>
+        <br><br>
+        <!-- <a href="#" id="nueva_cuenta" type="submit">Crear cuenta</a> -->
+        <button id="ingresar" type="submit">Acceder</button>
+      </form>
+    </div>
+  </div>
+</div>

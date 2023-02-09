@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="row" *ngIf="skills">
+    <div class="row-form_editarskill">
+        <div class="row-header">
+            <i class="fa-solid fa-clipboard" style="font-size: 80px;"></i>
+            <h2 style="margin-top: 15px;">Editar Skill</h2>
+        </div>
+        <br>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <label for="nombreS">Nombre</label>
+            <br>
+            <input placeholder="Nombre" type="text" name="nombreS" [(ngModel)]="skills.nombreS" required>        
+            <br><br>
+
+            <label for="porcentajeS">Porcentaje %</label>
+            <br>
+            <input placeholder="Descripcion" type="text" name="porcentajeS" [(ngModel)]="skills.porcentajeS" required>
+            <br><br>
+
+            <label for="imagenS">Imagen</label>
+            <br>
+            <input placeholder="Url de la imagen" type="text" name="imagenS" [(ngModel)]="skills.imagenS" required>
+            <br><br>
+
+            <button id="editar_skill" type="submit">Actualizar</button>
+        </form>
+    </div>
+</div>

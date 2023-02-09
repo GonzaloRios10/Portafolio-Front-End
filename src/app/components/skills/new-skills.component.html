@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="row">
+    <div class="row-form_nuevaskill">
+        <div class="row-header">
+            <i class="fa-solid fa-clipboard" style="font-size: 80px;"></i>
+            <h2 style="margin-top: 15px;">Nueva skill</h2>
+        </div>
+        <br>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" enctype="multipart/form-data">
+            <label for="nombreS">Nombre</label>
+            <br>
+            <input placeholder="Nombre" type="text" name="nombreS" [(ngModel)]="nombreS" required>  <br><br>
+
+            <label for="PorcentajeS">Porcentaje %</label>
+            <br>
+            <input placeholder="Porcentaje" type="number" name="porcentajeS" [(ngModel)]="porcentajeS" required>
+            <br><br>
+            
+            <label for="imagenS">Imagen</label>
+            <br>
+            <input placeholder="Url de la imagen" type="text" name="imagenS" [(ngModel)]="imagenS" required>    
+            <br><br>
+            
+            <button id="agregar_skill" type="submit">Agregar</button>
+        </form>
+ <!--    </div> -->
+</div>

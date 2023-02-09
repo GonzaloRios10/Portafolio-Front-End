@@ -1,0 +1,115 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*#logoAP {
+	width: 155px;
+	margin-left: 10px;
+}*/	
+
+header {
+	--bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    width: 100%;
+    height: 90px;
+	background: rgb(52, 73, 94); /*background: #023b96;*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+/*	border: 1px solid white;*/
+}
+
+.logos_icono {
+	background: rgb(52, 73, 94);
+	color: rgb(254, 254, 254);
+	border: 2px solid transparent;
+	font-size: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+.logos_icono:hover {
+	color: rgb(133, 193, 233);
+	border-bottom: rgb(133, 193, 233) 2px solid;
+	transition: 0.4s;
+}
+
+.caja {
+	padding-left: 450px;
+}
+
+.boton {
+	font-size: 20px;
+	margin-right: 20px;
+	padding: 5px 10px;
+	background: rgb(46, 64, 83);
+	color: rgb(255, 255, 255);
+	border: none;
+	border-radius: 5px;
+}
+
+.boton:hover {
+	color: rgb(133, 193, 233);
+}
+
+.mostrar-menu,
+.esconder-menu {
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+.mostrar-menu {
+	padding-right: 40px;
+}
+
+#check {
+	display: none;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+	.mostrar-menu, 
+	.esconder-menu {
+		display: block;
+	}
+
+	.menu {
+		background: rgb(52, 73, 94);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		right: -100%;
+		top: 0;
+		text-align: center;
+		padding: 100px 0px;
+		z-index: 100;
+		transition: 0.8s;
+	}
+
+	.menu a {
+		display: block;
+		padding: 15px;
+	}
+
+	a button i {
+		font-size: 40px;
+	}
+
+	.boton {
+		font-size: 20px;
+	}
+
+	.esconder-menu {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+
+	#check:checked ~ .menu {
+		right: 0;
+	}
+}

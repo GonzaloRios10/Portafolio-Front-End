@@ -1,0 +1,48 @@
+<header>
+	<!-- <img src="../../../assets/APLogo.png" alt="Logo Argentina Programa" id="logoAP"> -->
+
+	<input type="checkbox" id="check">
+
+	<label for="check" class="mostrar-menu">
+		&#8801;
+	</label>
+
+	<nav class="menu">
+
+		<a href="https://www.linkedin.com/in/gonzalo-agustín-rios-540784220" target="_BLANK">
+			<button class="logos_icono">
+				<i class="fa-brands fa-linkedin-in"></i>
+			</button>
+		</a>
+
+		<a href="https://github.com/GonzaloRios10?tab=repositories" target="_BLANK">
+			<button class="logos_icono">
+				<i class="fa-brands fa-github"></i>
+			</button>
+		</a>
+		
+		<a href="https://www.instagram.com/gonza.rios/" target="_BLANK">
+			<button class="logos_icono">
+				<i class="fa-brands fa-instagram"></i>
+			</button>
+		</a>
+
+		<label for="check" class="esconder-menu">
+			&#215;
+		</label>
+
+		
+		<a (click)="login()" *ngIf="!isLogged" class="caja">
+			<button class="boton">
+				| Log In <i class="fa-solid fa-users"></i> 
+			</button>
+		</a>
+		<a (click)="onLogOut()" *ngIf="isLogged" class="caja">
+			<button class="boton">
+				| Sign Off <i class="fa-solid fa-flag"></i> 
+			</button>
+		</a>
+
+	</nav>
+	
+</header>

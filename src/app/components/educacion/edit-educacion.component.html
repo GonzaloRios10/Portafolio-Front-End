@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="row" *ngIf="educacion">
+    <div class="row-form_editaredu">
+        <div class="row-header">
+            <i class="fa-solid fa-user-graduate" style="font-size: 80px;"></i>
+            <h2 style="margin-top: 15px;">Editar educacion</h2>
+        </div>
+        <br>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <label for="nombreE">Titulo obtenido</label>
+            <br>
+            <input placeholder="Nombre" type="text" id="nombreE" name="nombreE" [(ngModel)]="educacion.nombreE" required>        
+            <br><br>
+            <label for="descripcionE">Descripcion de la educacion</label>
+            <br>
+            <input placeholder="Descripcion" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="educacion.descripcionE" required>
+            <br><br>
+            <button id="editar_edu" type="submit">Actualizar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="row">
+    <div class="row-form_nuevoproyec">
+        <div class="row-header">
+            <i class="fa-solid fa-computer" style="font-size: 80px;"></i>
+            <h2 style="margin-top: 15px;">Nuevo proyecto</h2>
+        </div>
+        <br>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" enctype="multipart/form-data">
+            <label for="nombreP">Nombre del proyecto</label>
+            <br>
+            <input placeholder="Nombre" type="text" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>        
+            <br><br>
+            <label for="descripcionP">Descripcion</label>
+            <br>
+            <input placeholder="Descripcion" type="text" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP" required>
+            <br><br>
+            <label for="imagenP">Imagen del proyecto</label>
+            <br>
+            <input placeholder="Url de la imagen" type="text" name="imagenP" [(ngModel)]="imagenP" required>    
+            <br><br>
+            <button id="agregar_proyec" type="submit">Agregar</button>
+        </form>
+    </div>
+</div>

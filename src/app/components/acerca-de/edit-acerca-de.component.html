@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="row" *ngIf="persona">
+    <div class="row-form_editarperfil">
+        <div class="row-header">
+            <img src="{{persona.img}}" alt="Foto de Perfil" class="foto-perfil">
+            <h2 style="margin-top: 15px;">Editar perfil</h2>
+        </div>
+        <br>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input placeholder="Nombre completo" type="text" name="nombre" [(ngModel)]="persona.nombre" required>                    
+            <br><br>
+                
+            <label for="apellido">Apellido</label>
+            <br>
+            <input placeholder="Apellido completo" type="text" name="apellido" [(ngModel)]="persona.apellido" required>
+                
+            <br><br>
+
+            <label for="perfil">Perfil</label>
+            <br>
+            <input placeholder="perfil de usuario" type="text" name="perfil" [(ngModel)]="persona.perfil" required>
+                
+            <br><br>
+                
+            <label for="email">E-mail</label>
+            <br>
+            <input placeholder="Cuenta de e-mail" type="text" name="email" [(ngModel)]="persona.email" required>
+                
+            <br><br>
+
+            <label for="telefono">Telefono</label>
+            <br>
+            <input placeholder="Telefono movil" type="text" name="telefono" [(ngModel)]="persona.telefono" required>
+
+            <br><br>
+
+            <label for="img">Foto de perfil</label>
+            <br>
+            <input type="file" name="img" id="img" [(ngModel)]="persona.img" (change)="uploadImagen($event)" required>
+                
+            <br><br>
+            <label for="banner">Foto del banner</label>
+            <br>
+            <input placeholder="Url de la imagen" type="text" name="banner" [(ngModel)]="persona.banner" required>
+                
+            <br><br>
+
+            <label for="acerca_demi">Acerca de mi</label>
+            <br>
+            <textarea placeholder="Descripcion personal" name="acerca_demi" [(ngModel)]="persona.acerca_demi" required></textarea>
+
+            <br><br>
+
+            <button id="editar_exp" type="submit">Actualizar</button>
+        </form>
+    </div>
+</div>

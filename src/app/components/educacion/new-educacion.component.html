@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="row">
+    <div class="row-form_nuevaedu">
+        <div class="row-header">
+            <i class="fa-solid fa-user-graduate" style="font-size: 80px;"></i>
+            <h2 style="margin-top: 15px;">Nueva educacion</h2>
+        </div>
+        <br>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <label for="nombreE">Nombre de la institucion</label>
+            <br>
+            <input placeholder="Nombre" type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>        
+            <br><br>
+            <label for="descripcionE">Descripcion de la educacion</label>
+            <br>
+            <input placeholder="Descripcion" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+            <br><br>
+            <button id="agregar_edu" type="submit">Agregar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+	<h2>Experiencia laboral <i class="fa-solid fa-house-laptop"></i></h2>
+	<div>
+        <button type="button" class="boton_nuevaexp" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
+    </div>
+    
+    <div class="row-caja" *ngFor="let Experiencia of expe">
+        <details class="row-details">
+            <summary class="row-details-summary">
+                {{Experiencia.nombreE}}
+                <button *ngIf="isLogged" class="boton_editar" routerLink="/editexp/{{Experiencia.id}}">
+                    <span></span>Editar <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button *ngIf="isLogged" class="boton_borrar" (click)="delete(Experiencia.id)">
+                    <span></span>Eliminar <i class="fa-solid fa-trash"></i>
+                </button>
+            </summary>
+
+            <ul class="row-details-summary-list">
+                <li>
+                    {{Experiencia.descripcionE}}
+                </li>
+            </ul>
+        </details>
+    </div>
+</div>

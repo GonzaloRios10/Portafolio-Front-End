@@ -1,0 +1,28 @@
+<div class="row">
+	<h2>Educacion <i class="fa-solid fa-user-graduate"></i></h2>
+	<div>
+        <button type="button" class="boton_nuevaedu" routerLink="/nuevaedu" *ngIf="isLogged">
+            Nueva Educacion
+         </button>
+    </div>
+    <div class="row-caja" >
+        <details class="row-details" *ngFor="let Educacion of educacion">
+            <summary class="row-details-summary" >
+                {{Educacion.nombreE}}
+                <button *ngIf="isLogged" class="boton_editar" routerLink="/editedu/{{Educacion.id}}">
+                    <span></span>Editar <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button *ngIf="isLogged" class="boton_borrar" (click)="delete(Educacion.id)">
+                    <span></span>Eliminar <i class="fa-solid fa-trash"></i>
+                </button> 
+            </summary>
+
+            <ul class="row-details-summary-list">
+                <li>
+                    {{Educacion.descripcionE}}
+                </li>
+            </ul>
+        </details>
+    </div>
+</div>

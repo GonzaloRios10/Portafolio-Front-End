@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.row {
+	--bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    width: 100%;
+    height: auto;
+	background: rgb(52, 73, 94);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding-top: 20px;
+}

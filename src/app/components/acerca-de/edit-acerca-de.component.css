@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.row {
+	width: 100%;
+	height: auto;
+	background: rgb(236, 240, 241);
+}
+
+.foto-perfil {
+	width: 200px;
+	border-radius: 100%;
+	border: 1px solid rgb(0, 0, 0);
+}
+
+.row-header {
+	margin-top: 50px;
+/*	border: solid 1px;*/
+}
+
+.row-form_editarperfil {
+	background: rgb(52, 73, 94);
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 4%;
+	margin-bottom: 50px;
+	width: 400px;
+	height: auto;
+	color: white;
+	text-align: center;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	border-radius: 6px;
+/*	border: solid 1px;*/
+}
+
+input {
+	padding: 10px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	border-bottom: 5px solid rgb(144, 148, 151 );
+}
+
+#img {
+	border: none;
+}
+
+input, textarea:focus {
+	outline: none;
+}
+
+textarea {
+	padding: 20px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	border-bottom: 5px solid rgb(144, 148, 151 );
+	resize: vertical;
+	max-height: 300px;
+}
+
+#editar_exp {
+	background: rgb(26, 115, 232);
+	color: rgb(255, 255, 255);
+	margin-left: 5px;
+	margin-bottom: 50px;
+	padding: 10px;
+	width: 45%;
+	border: none;
+	border-radius: 6px;
+}
+
+#editar_exp:hover {
+	background: rgb(41, 101, 179);
+}
+
+/*Responsive*/
+@media (max-width: 768px){
+	.row-form_editarperfil {
+		margin-top: 7%;
+		width: 350px;
+	}
+}

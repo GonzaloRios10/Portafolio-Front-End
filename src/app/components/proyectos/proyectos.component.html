@@ -1,0 +1,115 @@
+<div class="row">
+	<h2>Proyectos <i class="fa-solid fa-computer"></i></h2>
+	<div>
+        <button type="button" class="boton_nuevoproyec" routerLink="/nuevoproyecto" *ngIf="isLogged">
+            Nuevo Proyecto
+        </button>
+    </div>
+
+    <section class="row-section">
+        <div class="row-section-slider">
+            <div class="row-section-slider-slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="st first">
+                    <h3>
+                        {{proyec[0].nombreP}}
+                        <button *ngIf="isLogged" class="boton_editar" routerLink="/editproyecto/{{proyec[0].id}}">
+                            <span></span>Editar <i class="fa-solid fa-pen"></i>
+                        </button>
+
+                        <button *ngIf="isLogged" class="boton_borrar" (click)="delete(proyec[0].id)">
+                            <span></span>Eliminar <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </h3>
+                    <p>
+                        {{proyec[0].descripcionP}}
+                    </p>  
+                    <img src="{{proyec[0].imagenP}}">
+                </div> 
+
+                <div class="st" *ngFor="let Proyectos of proyec | slice:1;">
+                    <h3>
+                        {{Proyectos.nombreP}}
+                        <button *ngIf="isLogged" class="boton_editar" routerLink="/editproyecto/{{Proyectos.id}}">
+                            <span></span>Editar <i class="fa-solid fa-pen"></i>
+                        </button>
+
+                        <button *ngIf="isLogged" class="boton_borrar" (click)="delete(Proyectos.id)">
+                            <span></span>Eliminar <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </h3>
+                    <p>
+                        {{Proyectos.descripcionP}}
+                    </p>  
+                    <img src="{{Proyectos.imagenP}}">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                </div>
+            </div>
+            
+            <div class="nav-m">
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio2" class="m-btn"></label>
+                <label for="radio3" class="m-btn"></label>
+                <label for="radio4" class="m-btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var count = 1;
+        setInterval(function(){
+            document.getElementById('radio' + count).checked=true;
+            count++;
+            if (count > 4) {
+                count = 1;
+            }
+        },5000);
+    </script>
+</div>
+
+    <!-- <ul>
+            <li *ngFor="let Proyectos of proyec">
+                <h3>
+                    {{Proyectos.nombreP}}
+                    <button *ngIf="isLogged" class="boton_editar" routerLink="/editproyecto/{{Proyectos.id}}">
+                        <span></span>Editar <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button *ngIf="isLogged" class="boton_borrar" (click)="delete(Proyectos.id)">
+                        <span></span>Eliminar <i class="fa-solid fa-trash"></i>
+                    </button>
+                </h3>
+                <p>
+                    {{Proyectos.descripcionP}}
+                </p>  
+                <img src="{{Proyectos.imagenP}}">
+
+                <div class="caja-link">
+                    <a href="#" class="link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-link"></i>
+                    </a>
+                </div>
+                
+            </li>
+        </ul> -->
+<!-- 
+    <section *ngFor="let Proyectos of proyec">
+
+        <img src="{{Proyectos.imagenP}}">
+
+    </section> -->
+
